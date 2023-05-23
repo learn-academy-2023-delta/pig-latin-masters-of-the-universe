@@ -55,6 +55,10 @@ Oday ouyay eakspay igpay atinlay? If you are scratching your head at that statem
 - Can hit the submit button
 - Can see the words that begin with a vowel translated to Pig Latin and rendered to the page (e.g. appleway)
 
+Pseudocode: 1 use a for loop to iterate through (eachWord) which is the words in the translatedWordsArray []
+2- use .includes method to check if (vowelsArray) contains a the eachWord[0]
+3-if the condition is met add ("way") to the end of the string and then return
+
 **Story 2: In order to see English words converted to Pig Latin, as the user of the application, I need to see words that have "qu" in the first syllable translated by moving all the consonant and the "u" to the end and add "ay".**
 
 **Branch:** qu-functionality
