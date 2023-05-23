@@ -31,16 +31,24 @@ const App = () => {
       })
       console.log("vowelsArray:", vowelsArray)
      // ACTION ITEM: your Pig Latin logic goes here!
-      
+     let pigLatinWords = [];
      for (let i = 0; i < eachWord.length; i++){
         if (vowelsArray.includes(eachWord[0])) {
-          return eachWord += `way`
+          pigLatinWords.push(`${eachWord}way`)
+        } else if(!(vowelsArray.includes(eachWord[0][1])) &&   (eachWord[2]==="y")){
+          let firstTwo = eachWord.slice(0,2)
+          pigLatinWords.push(`${eachWord[2]}${firstTwo}ay`)
+
         } else if (!(vowelsArray.includes(eachWord[0][1]))){
-          let withoutTwoLetters = eachWord.slice(0, 1)
-          let someThings = eachWord.slice(1, eachWord.length -1 )
-          return withoutTwoLetters + someThings + `ay`
-        }
+          let withoutTwoLetters = eachWord.slice(0, 1);
+          let someThings = eachWord.slice(1, eachWord.length -1 );
+          pigLatinWords.push(`${withoutTwoLetters}${someThings}ay`)
+        // } else if( ){
+        //   pigLatinWords.push()
+        // }
+        return pigLatinWords
       }
+    
 
     
 
