@@ -35,9 +35,14 @@ const App = () => {
      for (let i = 0; i < eachWord.length; i++){
         if (vowelsArray.includes(eachWord[0])) {
           return eachWord += `way`
-
+        } else if (!(vowelsArray.includes(eachWord[0][1]))){
+          let withoutTwoLetters = eachWord.slice(0, 1)
+          let someThings = eachWord.slice(1, eachWord.length -1 )
+          return withoutTwoLetters + someThings + `ay`
         }
       }
+
+    
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
